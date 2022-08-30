@@ -1,0 +1,11 @@
+.prediction-text-center{
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+    font-size: 10px;
+}
+.row{
+    margin-bottom: 10px !important;
+}

@@ -1,0 +1,73 @@
+{% extends 'prediction/base.html' %}
+
+{% block content %}
+    <div class="prediction-text-center">
+        <h3>Statistical Features Table </h3>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Feature</th>
+                <th scope="col">P-Value</th>
+                <th scope="col">Significant</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gender</td>
+                <td>0.49</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Senior Citizen</td>
+                <td>2.48e-36</td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>Partner</td>
+                <td>3.93e-36</td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>Dependents</td>
+                <td>2.01e-42 </td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>PhoneService</td>
+                <td>0.35</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Internet Service</td>
+                <td>5.83e-159 </td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>Online Security</td>
+                <td>1.40e-184</td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>Tech Support</td>
+                <td>7.40e-180 </td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>Streaming TV</td>
+                <td>1.32e-81 </td>
+                <td>***</td>
+            </tr>
+            <tr>
+                <td>Online Security</td>
+                <td>1.32e-81 </td>
+                <td>***</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <span>Note: *** represents statistically significant feature</span>
+        <p>The statistical test used is Chisquare test for categorical features</p>
+    </div>
+
+{% endblock %}

@@ -1,4 +1,109 @@
 {% extends 'prediction/base.html' %}
+{% load static %}
 {% block content %}
-  <h1>This is prediction home page</h1>
+	<div class="prediction-text-center mb-5">
+		<h3>Visualizations</h3>
+	</div>
+	<div class="row">
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/1.png' %}" alt="Target pie">
+				<figcaption>Fig: Target Feature Churn Pie-Chart</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/2.png' %}" alt="senior citizen  pie">
+				<figcaption>Fig: Senior Citizen Pie-Chart</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/3.png' %}" alt="partner pie">
+				<figcaption>Fig: Partner Pie-Chart</figcaption>
+			</figure>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/12.png' %}" alt="tech support bar">
+				<figcaption>Fig: Tech Support Barplot</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/6.png' %}" alt="phone service feature pie">
+				<figcaption>Fig: Phone Service Pie-Chart</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/13.png' %}" alt="streaming TV bar">
+				<figcaption>Fig: Streaming TV Barplot</figcaption>
+			</figure>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/7.png' %}" alt="multiple-lines bar">
+				<figcaption>Fig: Mulitple-lines Barplot</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/8.png' %}" alt="internet service bar">
+				<figcaption>Fig: Internet Service Barplot</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/9.png' %}" alt="online security bar">
+				<figcaption>Fig: Online Security Barplot</figcaption>
+			</figure>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/17.png' %}" alt="monthly charge dist">
+				<figcaption>Fig: Monthly Charge Distribution</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/5.png' %}" alt="tenure bar">
+				<figcaption>Fig: Tenure Barplot</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/18.png' %}" alt="total charge dist">
+				<figcaption>Fig: Total Charges Distribution</figcaption>
+			</figure>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/20.png' %}" alt="baseline dt roc">
+				<figcaption>Fig: ROC Curve (Baseline Decision Tree Model)</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/21.png' %}" alt="hypertuned dt roc">
+				<figcaption>Fig: ROC Curve (Hypertuned Decision Tree Model)</figcaption>
+			</figure>
+		</div>
+		<div class="col">
+			<figure>
+				<img width="340" height="340" src="{% static 'prediction/img/22.png' %}" alt="hypternuned rf roc">
+				<figcaption>Fig: ROC Curve (Hypertuned Random Forest Model)</figcaption>
+			</figure>
+		</div>
+	</div>
 {% endblock %}
