@@ -8,6 +8,7 @@
 
 1) Install docker and docker compose on your system
 2) Run command -> sudo docker compose up
+3) Go to: 0.0.0.0:9000
 
 ### IMPORTANT COMMANDS
 
