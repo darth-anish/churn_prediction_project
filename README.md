@@ -6,13 +6,19 @@
 
 ### PROJECT RUNNING STEPS
 
-1) Install docker and docker-compose on your system
-2) Run command -> sudo docker-compose up
+1) Install docker and docker compose on your system
+2) Run command -> sudo docker compose up
 
 ### IMPORTANT COMMANDS
 
-1) To create super/administrative user -> sudo docker-compose exec web  python3 manage.py createsuperuser
+1) To create super/administrative user -> sudo docker compose exec web  python3 manage.py createsuperuser
 2) To make migrations -> sudo docker-compose exec web python3 manage.py make migrations
-3) To execute migration -> sudo docker-compose exec web python3 manage.py migrate
-4) To create an app inside project -> sudo docker-compose exec web python3 manage.py startapp prediction
-3) Stop docker service -> sudo docker-compose down
+3) To execute migration -> sudo docker compose exec web python3 manage.py migrate
+4) To create an app inside project -> sudo docker compose exec web python3 manage.py startapp prediction
+3) Stop docker service -> sudo docker compose down
+
+### To connect to postgresql installed inside the docker container in your local host machine, using the following credentials
+- host/address: 0.0.0.0:5000
+- dbname: postgres
+- user: postgres
+- password:*****
