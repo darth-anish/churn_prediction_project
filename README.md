@@ -19,7 +19,7 @@
 3) Stop docker service -> sudo docker compose down
 
 ### To connect to postgresql installed inside the docker container in your local host machine, using the following credentials
-- host/address: 0.0.0.0:5000
+- host/address: 0.0.0.0:5432
 - dbname: postgres
 - user: postgres
 - password:*****
