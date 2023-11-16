@@ -20,5 +20,9 @@ services:
       - POSTGRES_NAME=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+      - USE_S3=TRUE
+      - AWS_ACCESS_KEY_ID=AKIA6B4BGPTRRG3OF6DF
+      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_STORAGE_BUCKET_NAME=django-static-001
     depends_on:
       - db
