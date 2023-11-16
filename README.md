@@ -8,7 +8,7 @@
 
 1) Install docker and docker compose on your system
 2) Run command -> sudo docker compose up
-3) Go to: 0.0.0.0:9000
+3) Go to: 0.0.0.0:9000 or localhost:9000
 
 ### IMPORTANT COMMANDS
 
@@ -16,10 +16,12 @@
 2) To make migrations -> sudo docker-compose exec web python3 manage.py make migrations
 3) To execute migration -> sudo docker compose exec web python3 manage.py migrate
 4) To create an app inside project -> sudo docker compose exec web python3 manage.py startapp prediction
-3) Stop docker service -> sudo docker compose down
+5) Stop docker service -> sudo docker compose down
+6) Build container again (If any changes in dockerfile or yml) -> docker compose up --build
+7) Collect static files (upload static files locally to aws S3) -> docker compose exec web python3 manage.py collectstatic
 
 ### To connect to postgresql installed inside the docker container in your local host machine, using the following credentials
 - host/address: 0.0.0.0:5432
-- dbname: postgres
-- user: postgres
-- password:*****
+- dbname: postgres (name of the database assigned in environment of docker.yml)
+- user: postgres (user of the database assigned in environment of docker.yml)
+- password:***** (password of user assigned in environment of docker.yml)
