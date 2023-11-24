@@ -19,6 +19,7 @@
 5) Stop docker service -> sudo docker compose down
 6) Build container again (If any changes in dockerfile or yml) -> docker compose up --build
 7) Collect static files (upload static files locally to aws S3) -> docker compose exec web python3 manage.py collectstatic
+8) To get inside dockerised web app -> supudo docker compose exec -it web /bin/bash
 
 ### To connect to postgresql installed inside the docker container in your local host machine, using the following credentials
 - host/address: 0.0.0.0:5432

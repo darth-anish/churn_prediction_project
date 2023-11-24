@@ -9,9 +9,24 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - 5432:5432
+  nginx:
+ 
+    # Build context
+    build:
+      context: .
+      dockerfile: nginx.dockerfile
+    
+    # Mapping machine and container ports
+    ports:
+      - 1337:80
+      
+    depends_on:
+      - web
+    restart: "on-failure"
   web:
+    # builds from Dockerfile from current directory (equivalent to Dockerfile)
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    # command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
     ports:
@@ -24,5 +39,6 @@ services:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - AWS_STORAGE_BUCKET_NAME=${AWS_STORAGE_BUCKET_NAME}
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
     depends_on:
       - db
